@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Variables!</title>
-  <link rel="stylesheet" href="../base.css">
-</head>
-
-<body>
-  <script>
-   console.log('hey')
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Variables!</title>
+    <link rel="stylesheet" href="../base.css">
+  </head>
+  
+  <body>
+    <script>
+      'use strict';
+      var first = 'wes'; //variable declaration - function scoped
+      let age = 300; //block scoped - updateable
+      const cool = true; //block scoped - not updateable
+      console.log(first); //function call
+       
+      if (age > 10){
+        console.log('You are old');
+      }
+     
+     
+      first = 'hofmeister';
+      age = 400;
+      
+      let $_$ = 3000; //The only special characters supported for vars
+     
+    </script>
+  </body>
 
 </html>

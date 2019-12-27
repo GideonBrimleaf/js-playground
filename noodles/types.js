@@ -33,3 +33,16 @@ const eachKidGets = Math.floor(smarties/kids);
 
 console.log(`each kid gets ${eachKidGets} smarties
 dad gets ${dadGets} smarties`)
+
+const person = {
+  name: `Gideon`,
+  surname:`Brimleaf`,
+  age:100
+};
+
+let undefinedAreJustNotSet;
+
+let nullHasToBeExplicit = null;
+
+let typeChecker = 10 === 10;
+let nonTypeChecker = '10' ==10;

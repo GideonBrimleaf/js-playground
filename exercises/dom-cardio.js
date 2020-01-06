@@ -73,6 +73,8 @@ let starWarsFragment = document.createRange()
 
 starWarsFragment.firstElementChild.lastElementChild.classList.add('warning')
 
+// can also be starWarsFragment.children[0].children[1].classList.add('warning')
+
 
 // remove the first paragraph
 
@@ -133,8 +135,16 @@ function deleteCard(button) {
 }
 // loop over them and attach a listener
 
-buttons.forEach(function(button){
+
+buttons.forEach(button => 
   button.addEventListener('click', function() {
     deleteCard(button)
   })
-})
+)
+
+// my original solution
+// buttons.forEach(function(button){
+//   button.addEventListener('click', function() {
+//     deleteCard(button)
+//   })
+// })

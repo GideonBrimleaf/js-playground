@@ -90,9 +90,10 @@ starWarsFragment.firstElementChild.firstElementChild.remove()
 function generatePlayerCard(name, age, height) {
   const ageInDogYears = age * 7
   let html =  `
-  <div class="playerCard">
+  <div class="playerCard" data-name="${name}">
     <h2>${name} — ${age}</h2>
     <p>They are ${height} and ${age} years old. In Dog years this person would be ${ageInDogYears}. That would be a tall dog!</p>
+    <button type="button">Delete Me!</button>
   </div>
   `
   return document.createRange()
@@ -113,9 +114,27 @@ const poe = generatePlayerCard('Poe', 41, '5ft 10')
 const finn = generatePlayerCard('Finn', 25, '6ft 1')
 
 // append those cards to the div
+cardsDiv.appendChild(rey)
+cardsDiv.appendChild(kylo)
+cardsDiv.appendChild(poe)
+cardsDiv.appendChild(finn)
+
 // put the div into the DOM just before the wrapper element
+
+kyloDiv.insertAdjacentElement('beforebegin', cardsDiv)
+
 // Bonus, put a delete Button on each card so when you click it, the whole card is removed
 
 // select all the buttons!
+const buttons = document.querySelectorAll('button')
 // make out delete function
+function deleteCard(button) {
+  button.parentElement.remove()
+}
 // loop over them and attach a listener
+
+buttons.forEach(function(button){
+  button.addEventListener('click', function() {
+    deleteCard(button)
+  })
+})

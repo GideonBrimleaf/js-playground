@@ -4,6 +4,9 @@
 // const wesImg = wes.querySelectorAll('img')
 // const heading = document.querySelector('h2')
 
+// CUSTOM DATA ATTRIBUTES!!
+// document.querySelector('.playerCard').dataset.name
+
 // // heading.textContent = ('filthy junk traders')
 // console.dir(heading.outerHTML)  
 
